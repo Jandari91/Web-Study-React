@@ -6,19 +6,23 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    
     <title>Momentum App</title>
+    
 </head>
 <body>
-    <div class="hello">
-        <h1>Grab me1!</h1>
-    </div>
-    <div class="hello">
-        <h1>Grab me2!</h1>
-    </div>
-    <div class="hello">
-        <h1>Grab me3!</h1>
-    </div>
+     <form id="login-form" class="hidden">
+        <input 
+        required
+        maxlength="15"
+        type="text" 
+        placeholder="What is your name?" />
+        <input type="submit" value="Login" />
+    </form>
+    <h1 id="greeting" class="hidden">
+
+    </h1>
+    <!-- <a href="https://nomadcoders.co">Go to Courses</a> -->
+
     <script src='app.js'></script>
 </body>
 </html>
