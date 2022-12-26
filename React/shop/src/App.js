@@ -8,6 +8,7 @@ import { createContext, useState } from "react";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import { Detail } from "./Detail";
 import { About } from "./About";
+import { Cart } from "./Cart";
 import axios from "axios";
 
 export let Context1 = createContext();
@@ -37,6 +38,13 @@ function App() {
               }}
             >
               Detail
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                navigate("/cart");
+              }}
+            >
+              Cart
             </Nav.Link>
           </Nav>
         </Container>
@@ -93,6 +101,8 @@ function App() {
           <Route path="member" element={<>멤버임</>} />
           <Route path="location" element={<>위치정보임</>} />
         </Route>
+
+        <Route path="/cart" element={<Cart />}></Route>
 
         <Route path="*" element={<>없는 페이지 입니다.</>} />
       </Routes>
