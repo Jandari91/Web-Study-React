@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { data } from "./data/products.js";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import { Detail } from "./Detail";
 import { About } from "./About";
@@ -14,6 +14,11 @@ import axios from "axios";
 export let Context1 = createContext();
 
 function App() {
+
+  useEffect(() => {
+    localStorage.setItem('watched', JSON.stringify([]));
+  }, [])
+
   let [재고] = useState([10, 11, 12]);
   let [products, setProducts] = useState(data);
   let [count, setCount] = useState(2);
