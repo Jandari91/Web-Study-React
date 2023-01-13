@@ -1,0 +1,27 @@
+.top-bar {
+  padding-left: 18px;
+  padding-right: 16px;
+  height: 100%;
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.left-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.right-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
