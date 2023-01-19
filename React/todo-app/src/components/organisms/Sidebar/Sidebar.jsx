@@ -1,5 +1,5 @@
-import "./Sidebar.css";
+import style from "./Sidebar.module.css";
 
 export function Sidebar() {
-  return <div className="sidebar">사이드영역입니다요.</div>;
+  return <div className={style.content}>사이드영역입니다요.</div>;
 }

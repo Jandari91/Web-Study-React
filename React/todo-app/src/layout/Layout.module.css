@@ -1,0 +1,26 @@
+:root {
+  --headerHeight: 2.5em;
+  --sidebarWidth: 10em;
+}
+
+.header {
+  height: var(--headerHeight);
+  background-color: #db4c3f;
+  margin: 0;
+}
+.center {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - var(--headerHeight));
+}
+
+.sidebar_open {
+  width: var(--sidebarWidth);
+  transition: all 0.2s;
+}
+
+.sidebar_close {
+  width: 0;
+  visibility: collapse;
+  transition: all 0.2s;
+}

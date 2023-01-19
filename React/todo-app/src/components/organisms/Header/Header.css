@@ -1,10 +1,10 @@
-.top-bar {
+.top_bar {
   padding-left: 18px;
   padding-right: 16px;
   height: 100%;
 }
 
-.top-bar-inner {
+.top_bar_inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,16 +12,37 @@
   width: 100%;
 }
 
-.left-control {
+.left_control {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 100%;
 }
 
-.right-control {
+.right_control {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 100%;
+}
+
+.menu_btn {
+  height: 2em;
+  width: 2em;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.menu_btn:hover {
+  background-color: hsla(0, 0%, 100%, 0.2);
+  border-radius: 3px;
+}
+
+.menu_icon {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  color: white;
 }
