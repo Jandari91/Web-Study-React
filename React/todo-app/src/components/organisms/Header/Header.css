@@ -24,12 +24,13 @@
   flex-direction: row;
   align-items: center;
   height: 100%;
+  gap: 1em;
 }
 
 .menu_btn {
-  height: 2em;
-  width: 2em;
-  padding: 0;
+  height: 2.4em;
+  width: 2.4em;
+  padding: 1px;
   margin: 0;
   background-color: transparent;
   border: 0;
@@ -45,4 +46,17 @@
   width: 100%;
   background-size: cover;
   color: white;
+}
+
+.menu_productivity_btn {
+  height: 2.5em;
+  width: 5em;
+  padding: 4px 2px;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+}
+.menu_productivity_btn:hover {
+  background-color: hsla(0, 0%, 100%, 0.2);
+  border-radius: 3px;
 }

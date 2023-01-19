@@ -1,6 +1,5 @@
 :root {
-  --headerHeight: 2.5em;
-  --sidebarWidth: 10em;
+  --headerHeight: 2.7em;
 }
 
 .header {
@@ -15,7 +14,7 @@
 }
 
 .sidebar_open {
-  width: var(--sidebarWidth);
+  width: 13em;
   transition: all 0.2s;
 }
 

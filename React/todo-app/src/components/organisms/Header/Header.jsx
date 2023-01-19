@@ -3,6 +3,7 @@ import { sidebarAction } from "store/store";
 import { useState } from "react";
 import { Button } from "components/atoms/index";
 import { useDispatch } from "react-redux";
+import { IconButton } from "components/molecules";
 
 export function Header() {
   const [isOpenSidebar, setIsOpenSidebar] = useState(true);
@@ -17,11 +18,26 @@ export function Header() {
     <div className="top_bar">
       <div className="top_bar_inner">
         <div className="left_control">
-          <Button className="menu_btn" type="button" onClick={onClickMenu}>
-            <span className="material-symbols-outlined menu_icon">menu</span>
-          </Button>
+          <IconButton icon="menu" className="menu_btn" onClick={onClickMenu} />
+          <IconButton icon="home" className="menu_btn" />
         </div>
-        <div className="right_control">bb</div>
+        <div className="right_control">
+          <IconButton icon="Add" className="menu_btn" onClick={onClickMenu} />
+          <IconButton
+            icon="data_exploration"
+            className="menu_productivity_btn"
+            onClick={onClickMenu}
+          >
+            0/5
+          </IconButton>
+          <IconButton icon="help" className="menu_btn" onClick={onClickMenu} />
+          <IconButton
+            icon="Notifications"
+            className="menu_btn"
+            onClick={onClickMenu}
+          />
+          <IconButton icon="home" className="menu_btn" onClick={onClickMenu} />
+        </div>
       </div>
     </div>
   );
