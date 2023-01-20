@@ -14,8 +14,14 @@ export function Layout() {
         <Header />
       </div>
       <div className={style.center}>
-        <div className={sidebar ? style.sidebar_open : style.sidebar_close}>
-          {sidebar ? <Sidebar /> : null}
+        <div
+          className={
+            sidebar
+              ? `${style.sidebar} ${style.sidebar_open}`
+              : `${style.sidebar} ${style.sidebar_close}`
+          }
+        >
+          <Sidebar />
         </div>
         <div className={style.main}>
           <Outlet />

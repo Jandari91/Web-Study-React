@@ -1,5 +1,6 @@
 :root {
   --headerHeight: 2.7em;
+  --sidebarLeft: -30em;
 }
 
 .header {
@@ -13,13 +14,23 @@
   height: calc(100vh - var(--headerHeight));
 }
 
-.sidebar_open {
-  width: 13em;
+.sidebar {
+  height: calc(100vh - var(--headerHeight));
+  width: 250px;
+  top: var(--headerHeight);
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
   transition: all 0.2s;
 }
 
+.sidebar_open {
+  margin-left: 0px;
+}
+
 .sidebar_close {
-  width: 0;
-  visibility: collapse;
-  transition: all 0.2s;
+  margin-left: -250px;
+}
+
+.main {
 }
