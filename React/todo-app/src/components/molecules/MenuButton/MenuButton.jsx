@@ -6,6 +6,7 @@ export function MenuButton({
   label,
   className,
   count,
+  color = "white",
   type = "button",
   onClick,
 }) {
@@ -15,7 +16,10 @@ export function MenuButton({
         <div className={style.content}>
           <div className={style.title}>
             <div className={style.icon}>
-              <span className="material-symbols-outlined menu_icon">
+              <span
+                className="material-symbols-outlined menu_icon"
+                style={{ color: color }}
+              >
                 {icon}
               </span>
             </div>
