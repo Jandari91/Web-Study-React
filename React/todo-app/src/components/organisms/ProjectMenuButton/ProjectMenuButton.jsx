@@ -4,7 +4,7 @@ export function ProjectMenuButton({ onAddClick, onExpandClick, isExpand }) {
   return (
     <>
       <div className={style.container}>
-        <h2>프로젝트</h2>
+        <h4>프로젝트</h4>
         <div className={style.button_group}>
           <span
             onClick={onAddClick}

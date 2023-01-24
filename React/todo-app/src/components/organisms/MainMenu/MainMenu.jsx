@@ -1,10 +1,13 @@
+import { Modal } from "components/atoms";
 import { MenuButton } from "components/molecules";
+import { AddProject } from "components/organisms";
 import { ProjectMenuButton } from "../ProjectMenuButton/ProjectMenuButton";
 import style from "./MainMenu.module.css";
 import { useState } from "react";
 
 export function MainMenu() {
   const [isExpand, setExpand] = useState(false);
+  const [showAddProject, setAddProject] = useState(false);
   return (
     <>
       <div className={style.main_menus}>
@@ -21,6 +24,9 @@ export function MainMenu() {
 
       <div className={style.project_menus}>
         <ProjectMenuButton
+          onAddClick={() => {
+            setAddProject(true);
+          }}
           onExpandClick={() => {
             setExpand(!isExpand);
           }}
@@ -33,16 +39,14 @@ export function MainMenu() {
           <MenuButton icon="today" label="오늘" color={"#058527"} />
           <MenuButton icon="today" label="오늘" color={"#058527"} />
           <MenuButton icon="today" label="오늘" color={"#058527"} />
-          <MenuButton icon="today" label="오늘" color={"#058527"} />
-          <MenuButton icon="today" label="오늘" color={"#058527"} />
-          <MenuButton icon="today" label="오늘" color={"#058527"} />
-          <MenuButton icon="today" label="오늘" color={"#058527"} />
-          <MenuButton icon="today" label="오늘" color={"#058527"} />
-          <MenuButton icon="today" label="오늘" color={"#058527"} />
-          <MenuButton icon="today" label="오늘" color={"#058527"} />
-          <MenuButton icon="today" label="오늘" color={"#058527"} />
-          <MenuButton icon="today" label="오늘" color={"#058527"} />
         </div>
+
+        <Modal
+          show={showAddProject}
+          onHide={() => {
+            setAddProject(false);
+          }}
+        ></Modal>
       </div>
     </>
   );
