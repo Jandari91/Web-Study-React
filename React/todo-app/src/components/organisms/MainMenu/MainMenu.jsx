@@ -46,7 +46,15 @@ export function MainMenu() {
           onHide={() => {
             setAddProject(false);
           }}
-        ></Modal>
+        >
+          <h2>alalal</h2>
+        <h2>alalal</h2>
+        <h2>alalal</h2>
+        <h2>alalal</h2>
+        <h2>alalal</h2>
+        <h2>alalal</h2>
+        </Modal>
+        
       </div>
     </>
   );

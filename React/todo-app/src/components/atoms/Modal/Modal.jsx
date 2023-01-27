@@ -8,7 +8,10 @@ export function Modal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      {console.log("adfadf")}
+      <BootstrapModal.Body>
+      {props.children}
+      </BootstrapModal.Body>
+      
     </BootstrapModal>
   );
 }
