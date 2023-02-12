@@ -47,14 +47,8 @@ export function MainMenu() {
             setAddProject(false);
           }}
         >
-          <h2>alalal</h2>
-        <h2>alalal</h2>
-        <h2>alalal</h2>
-        <h2>alalal</h2>
-        <h2>alalal</h2>
-        <h2>alalal</h2>
+          <AddProject></AddProject>
         </Modal>
-        
       </div>
     </>
   );
