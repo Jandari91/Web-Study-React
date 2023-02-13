@@ -6,3 +6,11 @@
 
 .footer {
 }
+
+.bookmark input:checked {
+  background-color: #28a745;
+}
+
+.viewType {
+  display: flex;
+}
