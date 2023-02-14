@@ -22,7 +22,8 @@ export function ImageCheckbox({
         }}
         className={style.image}
       ></div>
-      <Form.Check className={style.checked} label={label} checked={isChecked} />
+      
+      <Form.Check id="form_check" className={style.checked} label={label} checked={isChecked} type='radio' />
     </div>
   );
 }

@@ -42,6 +42,7 @@ export function MainMenu() {
         </div>
 
         <Modal
+          size="50px"
           show={showAddProject}
           onHide={() => {
             setAddProject(false);

@@ -1,10 +1,11 @@
 import style from "./AddProject.module.css";
-import { Label } from "components/atoms";
+import { Input, Label } from "components/atoms";
 import Form from "react-bootstrap/Form";
 import { colors } from "store/colors";
 import { ColorItem, ColorSelector } from "../ColorSelector/ColorSelector";
 import { useState } from "react";
 import { ImageCheckbox } from "components/molecules/";
+import { Modal as BootstrapModal, Button as BootstrapButton } from "react-bootstrap";
 
 export function AddProject() {
   const [isBookmark, setIsBookmark] = useState(false);
@@ -14,7 +15,15 @@ export function AddProject() {
   };
   return (
     <>
-      <Form>
+    <BootstrapModal.Header>
+      <BootstrapModal.Title>프로젝트 추가</BootstrapModal.Title>
+    </BootstrapModal.Header>
+    <BootstrapModal.Body>
+    <Form>
+        <Form.Group className="mb-3">
+          <Input title={"이름"}
+           className={style.label}></Input>
+        </Form.Group>
         <Form.Group className="mb-3">
           <Label className={style.label}>색상</Label>
           <ColorSelector colors={colors} />
@@ -74,15 +83,20 @@ export function AddProject() {
           </div>
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Text className={`${style.comment} text-muted`}>
-            보기는 공유 프로젝트에서 팀 멤버들 간에 동기화됩니다.
-          </Form.Text>
-          <Form.Text className={`${style.commentRed}`}>
-            {" "}
-            자세히 알아보기
+          <Form.Text className={`${style.note} text-muted`}>
+            <span>
+            보기는 공유 프로젝트에서 팀 멤버들 간에 동기화됩니다. 
+            <a href="www.naver.com">자세히 알아보기</a>
+            </span>
           </Form.Text>
         </Form.Group>{" "}
       </Form>
+
+    </BootstrapModal.Body>
+    <BootstrapModal.Footer>
+        <BootstrapButton className={style.btn_cancel} >취소</BootstrapButton>
+        <BootstrapButton className={style.btn_save} >추가</BootstrapButton>
+    </BootstrapModal.Footer>
     </>
   );
 }
