@@ -2,8 +2,7 @@ import { Dropdown } from "react-bootstrap";
 import style from "./ColorSelector.module.css";
 import { useState } from "react";
 
-export function ColorSelector({ colors }) {
-  const [selectedItem, setSelectedItem] = useState(colors[0]);
+export function ColorSelector({ colors, selectedItem, onSelectedHandler }) {
   return (
     <>
       <Dropdown>
@@ -14,16 +13,17 @@ export function ColorSelector({ colors }) {
         <Dropdown.Menu className={style.colorMenus}>
           {colors.map((item, index) => {
             return (
-              <div className={style.colorItem}>
-                <ColorItem
-                  clickHandler={() => {
-                    setSelectedItem(item);
-                  }}
-                  key={index}
-                  color={item.color}
-                  name={item.name}
-                />
-              </div>
+              <Dropdown.Item key={item.color}>
+                <div className={style.colorItem}>
+                  <ColorItem
+                    clickHandler={() => {
+                      onSelectedHandler(item);
+                    }}
+                    color={item.color}
+                    name={item.name}
+                  />
+                </div>
+              </Dropdown.Item>
             );
           })}
         </Dropdown.Menu>
